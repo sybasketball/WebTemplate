@@ -1,0 +1,1203 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D6325F1F-93B7-486D-9D0E-E2B727DC835A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sunny.App.Web</RootNamespace>
+    <AssemblyName>Sunny.App.Web</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="LitJSON, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\LitJSON.dll</HintPath>
+    </Reference>
+    <Reference Include="Lucene.Net, Version=3.0.3.0, Culture=neutral, PublicKeyToken=85089178b9ac3181, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Lucene.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="PanGu, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PanGu.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.HighLight, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PanGu.HighLight.dll</HintPath>
+    </Reference>
+    <Reference Include="PanGu.Lucene.Analyzer, Version=2.4.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\PanGu.Lucene.Analyzer.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin\content_edit.aspx" />
+    <Content Include="admin\default.aspx" />
+    <Content Include="admin\login.aspx" />
+    <Content Include="admin\project_manager.aspx" />
+    <Content Include="index.html" />
+    <Content Include="news.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="HtmlPart\ResetPassword.html" />
+    <Content Include="HtmlPart\UserEdit.html" />
+    <Content Include="Include\metro_black.aspx" />
+    <Content Include="Include\metro_blue.aspx" />
+    <Content Include="Include\metro_gray.aspx" />
+    <Content Include="Include\base_js.aspx" />
+    <Content Include="Resource\d3.v4.js" />
+    <Content Include="Resource\echarts.common.min.js" />
+    <Content Include="Resource\echarts.simple.min.js" />
+    <Content Include="Resource\images\3d_16.png" />
+    <Content Include="Resource\images\bj_sign.jpg" />
+    <Content Include="Resource\images\book.png" />
+    <Content Include="Resource\images\default_p.png" />
+    <Content Include="Resource\images\input_bg.png" />
+    <Content Include="Resource\images\link_16.png" />
+    <Content Include="Resource\images\login.jpg" />
+    <Content Include="Resource\images\login_bg.jpg" />
+    <Content Include="Resource\images\login_top_bg.png" />
+    <Content Include="Resource\images\logo.png" />
+    <Content Include="Resource\images\logo1.png" />
+    <Content Include="Resource\images\logo2.png" />
+    <Content Include="Resource\images\logo3.png" />
+    <Content Include="Resource\images\logo6.png" />
+    <Content Include="Resource\images\max.png" />
+    <Content Include="Resource\images\new_project.png" />
+    <Content Include="Resource\images\nopass.png" />
+    <Content Include="Resource\images\pass.png" />
+    <Content Include="Resource\images\state.png" />
+    <Content Include="Resource\images\submit.png" />
+    <Content Include="Resource\images\submit_hover.png" />
+    <Content Include="Resource\images\top_bg.png" />
+    <Content Include="Resource\images\user.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\datagrid-cellediting.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\easyloader.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\jquery.easyui.min.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-af.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-am.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-ar.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-bg.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-ca.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-cs.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-cz.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-da.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-de.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-el.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-en.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-es.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-fr.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-it.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-jp.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-ko.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-nl.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-pl.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-pt_BR.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-ru.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-sv_SE.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-tr.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-zh_CN.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\locale\easyui-lang-zh_TW.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.accordion.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.calendar.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.combo.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.combobox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.combogrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.combotree.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.combotreegrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.datagrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.datalist.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.datebox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.datetimebox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.datetimespinner.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.dialog.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.draggable.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.droppable.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.filebox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.form.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.layout.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.linkbutton.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.menu.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.menubutton.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.messager.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.mobile.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.numberbox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.numberspinner.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.pagination.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.panel.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.parser.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.passwordbox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.progressbar.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.propertygrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.resizable.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.searchbox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.slider.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.spinner.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.splitbutton.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.switchbutton.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.tabs.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.tagbox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.textbox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.timespinner.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.tooltip.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.tree.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.treegrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.validatebox.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\plugins\jquery.window.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\accordion.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\calendar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\combo.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\combobox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\datagrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\datalist.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\datebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\dialog.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\easyui.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\filebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\accordion_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\blank.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\calendar_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\combo_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\datagrid_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\datebox_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\layout_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\linkbutton_bg.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\loading.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\menu_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\messager_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\pagination_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\panel_tools.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\passwordbox_close.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\passwordbox_open.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\searchbox_button.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\slider_handle.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\spinner_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\tabs_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\tagbox_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\tree_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\images\validatebox_warning.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\layout.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\linkbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\menu.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\menubutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\messager.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\numberbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\pagination.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\panel.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\passwordbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\progressbar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\propertygrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\searchbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\slider.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\spinner.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\splitbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\switchbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\tabs.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\tagbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\textbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\tooltip.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\tree.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\validatebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\bootstrap\window.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\color.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icon.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\3d.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\add.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\book.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\browser.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\cancel.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\cancel_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\check.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\clear.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\content.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\contentManage.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\down.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\edit.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\editdata.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\edit_power.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\end.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\favorites.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\first.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\history.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\home.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\import.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\introduction.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\list.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\log.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\loginout.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\loginout_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\next.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\note.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\org.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\overview.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\photo.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\pre.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\print.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\project.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\project_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\publish.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\purchase.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\reload.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\remove.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\reset.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\reset_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\role.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\save.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\search.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\search_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\setting.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\stock.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\stock_in.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\stock_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\story.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\struct.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\submit.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\submit_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\system.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\system_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\theme.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\up.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\user.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\usermanager.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\users_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\user_while.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\icons\video.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\easyui.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\easyui_animation.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\easyui_plus.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\columns-ext\columns-ext.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\columns-ext\columns-ext.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\columns-ext\group.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\columns-ext\__MACOSX\._columns-ext.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-cellediting\datagrid-cellediting.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-cellediting\datagrid-cellediting.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-dnd\datagrid-dnd.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-dnd\datagrid-dnd.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-filter\datagrid-filter.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-filter\datagrid-filter.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\datagrid-filter\filter.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-bufferview.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-bufferview.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-defaultview.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-detailview.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-detailview.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-detailview2.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-groupview.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-groupview.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-scrollview.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-scrollview.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid-scrollview2.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-1.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-10.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-2.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-3.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-4.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-5.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-6.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-7.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-8.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\images\EST-9.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-dwrloader\dwrloader.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-dwrloader\dwrloader.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-edatagrid\editable-datagrid.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-edatagrid\jquery.edatagrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-etree\editable-tree.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-etree\jquery.etree.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-etree\jquery.etree.lang.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\jquery.pivotgrid.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\layout.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\load.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\pivotgrid.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\__MACOSX\._layout.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\__MACOSX\._load.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-portal\jquery.portal.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-portal\portal.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\align-center.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\align-justify.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\align-left.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\align-right.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\bold.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\bullets.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\case-font.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\copy.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\decrease-font.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\find.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\format.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\go.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\grow-font.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\increase-font.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\italic.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\numbers.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\paste.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\replace.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\select.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\selectall.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\shrink-font.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\strikethrough.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\subscript.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\superscript.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\16\underline.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\chart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\clipart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\paste.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\picture.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\shapes.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\smartart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\images\32\table.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\jquery.ribbon.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\ribbon-icon.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\ribbon.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-ribbon\ribbon.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\content.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\easyui-rtl.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\easyui-rtl.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\rtl.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\backcolor.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\bold.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\forecolor.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\indent.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\insertorderedlist.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\insertunorderedlist.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\italic.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\justifycenter.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\justifyfull.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\justifyleft.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\justifyright.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\outdent.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\strikethrough.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\underline.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\jquery.texteditor.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\texteditor.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\texteditor.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\__MACOSX\images\._backcolor.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\__MACOSX\images\._forecolor.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\__MACOSX\images\._indent.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\__MACOSX\images\._outdent.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\treegrid-dnd\treegrid-dnd.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\treegrid-dnd\treegrid-dnd.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icon.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\demo.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\demo_fontclass.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\demo_symbol.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\demo_unicode.html" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.svg" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\arrow_refresh.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\arrow_rotate_anticlockwise.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\arrow_rotate_clockwise.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\arrow_switch.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\back.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\blank.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\cancel.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\clear.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\cog.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\cut.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\edit_add.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\edit_remove.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\filesave.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\filter.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\folder_search.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\help.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\information.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\large_chart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\large_clipart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\large_picture.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\large_shapes.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\large_smartart.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\lock.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\lock_go.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\lock_password.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\man.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-append.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-cancel.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-delete.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-ok.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-pencil.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini-reload.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_add.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_cross.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_delete.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_edit.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_minus.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_refresh.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_set.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\mini_tick.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\more.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\no.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\ok.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\pencil.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\print.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\recover_deleted_items.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\redo.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\reload.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\search.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\set.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\sort_number.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\sum.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\tip.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\undo.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\update.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\user_config.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\wrench.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\icons\wrench_orange.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\about.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\accordion_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\alert_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\append-images.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\arrow-right.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\blank.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\calendar_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\combo_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\datagrid-filter.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\datagrid_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\datebox_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\disable.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\footer_projection.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_error.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_help.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_info.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_prompt.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_success.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\icons_warning.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\info-icons-at.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\info-icons-tel.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\layout_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\linkbutton_bg.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\list-loding.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\loading.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\logo.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\logo_110.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\menu_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\menu_arrows_blue.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\menu_arrows_white.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\messager_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\navigate_more.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\pagination_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\panel_tools - 副本.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\panel_tools.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\panel_tools_white.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\passwordbox_close.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\passwordbox_open.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait129x129.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait172x172-select.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait172x172.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait20x20.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait250x250.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait28x28.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait32x32.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait38x38.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait43x43.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\portrait86x86.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\progressbar-background.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\QRcode-close.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\QRcode-demo.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\QRcode.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\searchbox_button.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\searchbox_navigate_button.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\set.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\slider_handle.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\spinner_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tabs_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tabs_icons_hover.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tabs_icons_white.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tagbox_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tagbox_icons_white.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tree_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\tree_icons_2.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\images\validatebox_warning.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\insdep_tables.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\insdep_theme_default.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\jquery.insdep-extend.min.js" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\accordion.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\calendar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\combo.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\combobox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\datagrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\datalist.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\datebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\dialog.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\easyui.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\filebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\accordion_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\blank.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\calendar_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\combo_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\datagrid_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\datebox_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\layout_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\linkbutton_bg.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\loading.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\menu_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\messager_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\pagination_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\panel_tools.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\passwordbox_close.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\passwordbox_open.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\searchbox_button.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\slider_handle.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\spinner_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\tabs_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\tagbox_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\tree_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\images\validatebox_warning.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\layout.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\linkbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\menu.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\menubutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\messager.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\numberbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\pagination.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\panel.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\passwordbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\progressbar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\propertygrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\searchbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\slider.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\spinner.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\splitbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\switchbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\tabs.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\tagbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\textbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\tooltip.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\tree.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\validatebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\window.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\accordion.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\calendar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\combo.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\combobox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\datagrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\datalist.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\datebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\dialog.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\easyui.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\filebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\accordion_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\blank.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\calendar_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\combo_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\datagrid_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\datebox_arrow.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\layout_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\linkbutton_bg.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\loading.gif" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\menu_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\messager_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\pagination_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\panel_tools.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\passwordbox_close.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\passwordbox_open.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\searchbox_button.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\slider_handle.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\spinner_arrows.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\tabs_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\tagbox_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\tree_icons.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\images\validatebox_warning.png" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\layout.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\linkbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\menu.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\menubutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\messager.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\numberbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\pagination.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\panel.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\passwordbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\progressbar.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\propertygrid.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\searchbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\slider.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\spinner.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\splitbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\switchbutton.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\tabs.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\tagbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\textbox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\tooltip.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\tree.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\validatebox.css" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\window.css" />
+    <Content Include="Resource\Jquery.plus\common.js" />
+    <Content Include="Resource\Jquery.plus\date.js" />
+    <Content Include="Resource\Jquery.plus\DatePicker.js" />
+    <Content Include="Resource\Jquery.plus\doT.min.js" />
+    <Content Include="Resource\Jquery.plus\dump.js" />
+    <Content Include="Resource\Jquery.plus\easyui.grid.export_excel.js" />
+    <Content Include="Resource\Jquery.plus\flvplay\javaScriptPlugIn.swf" />
+    <Content Include="Resource\Jquery.plus\flvplay\jwplayer.js" />
+    <Content Include="Resource\Jquery.plus\flvplay\logo.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\logoPlugIn.swf" />
+    <Content Include="Resource\Jquery.plus\flvplay\player.swf" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\background.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\blankButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\capLeft.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\capRight.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\divider.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\fullscreenButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\fullscreenButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\muteButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\muteButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\normalscreenButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\normalscreenButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\pauseButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\pauseButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\playButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\playButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\timeSliderBuffer.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\timeSliderProgress.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\timeSliderRail.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\timeSliderThumb.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\unmuteButton.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\unmuteButtonOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\volumeSliderBuffer.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\volumeSliderProgress.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\controlbar\volumeSliderRail.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\display\background.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\display\bufferIcon.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\display\errorIcon.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\display\muteIcon.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\display\playIcon.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\dock\button.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\playlist\background.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\playlist\item.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\playlist\itemOver.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\playlist\sliderRail.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\playlist\sliderThumb.png" />
+    <Content Include="Resource\Jquery.plus\flvplay\skin\stormtrooper.xml" />
+    <Content Include="Resource\Jquery.plus\flvplay\swfobject.js" />
+    <Content Include="Resource\Jquery.plus\flvplay\vcastr22.swf" />
+    <Content Include="Resource\Jquery.plus\flvplay\vcastr3.swf" />
+    <Content Include="Resource\Jquery.plus\flvplay\video.html" />
+    <Content Include="Resource\Jquery.plus\flvplay\video_play.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\formValidator-4.1.3.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\formValidatorRegex.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\Author.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\images\bgx.png" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\images\global2.png" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\126\style\style.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\Author.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\images\background.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\images\bt.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\images\onLoad.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\images\reg-menu.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\images\verification-ui6.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\style\style.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\ArrowSolidBox\style\style_new.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\bt.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onCorrect.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onError.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onFocus.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onLoad.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onShow.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\onSuccess.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\pswState.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\user_div_on.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\user_div_on_bg.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\images\user_input_bg.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\style\style.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\baidu\作者.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\Author.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\bottom-left-w.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\bottom-right-w.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\error_01.png" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\ok_01.png" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\onLoad.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\top-left-w.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\images\top-right-w.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Bull\style\style.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\bt.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onCorrect.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onError.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onFocus.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onLoad.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onShow.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\images\onSuccess.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\style\style.css" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\Default\作者.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\Author.txt" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onCorrect.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onError.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onFocus.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onLoad.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onShow.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\images\onSuccess.gif" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\js\theme.js" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\Preview.jpg" />
+    <Content Include="Resource\Jquery.plus\formValidator4.1.3\themes\SolidBox\style\style.css" />
+    <Content Include="Resource\Jquery.plus\jquery-jtemplates.js" />
+    <Content Include="Resource\Jquery.plus\jquery.cookies\jquery.cookies.2.1.0.js" />
+    <Content Include="Resource\Jquery.plus\jquery.fileupload.js" />
+    <Content Include="Resource\Jquery.plus\jquery.iframe-transport.js" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\grab.cur" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\hand.cur" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.rotate_left.png" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.rotate_right.png" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.zoom_fit.gif" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.zoom_in.gif" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.zoom_out.gif" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\img\iviewer.zoom_zero.gif" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\jquery.iviewer.css" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\jquery.iviewer.js" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\jquery.iviewer.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\jquery.mousewheel.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.iviewer\jqueryui.js" />
+    <Content Include="Resource\Jquery.plus\jquery.jcarousellite.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.loadform.js" />
+    <Content Include="Resource\Jquery.plus\jquery.LoadImage.js" />
+    <Content Include="Resource\Jquery.plus\jquery.media.js" />
+    <Content Include="Resource\Jquery.plus\jquery.portal.js" />
+    <Content Include="Resource\Jquery.plus\jquery.soChange-min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\css\jquery-ui.css" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\css\jquery.tagsinput.css" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\js\jquery-ui.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\js\jquery.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\js\jquery.tagsinput.js" />
+    <Content Include="Resource\Jquery.plus\jquery.tagsinput\js\jquery.tagsinput.min.js" />
+    <Content Include="Resource\Jquery.plus\jquery.textSearch-1.0.js" />
+    <Content Include="Resource\Jquery.plus\jquery.ui.widget.js" />
+    <Content Include="Resource\Jquery.plus\jquery.url.js" />
+    <Content Include="Resource\Jquery.plus\json2.js" />
+    <Content Include="Resource\Jquery.plus\jsonsql-0.1.js" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\calendar.js" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\lang\en.js" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Resource\Jquery.plus\My97DatePicker\WdatePicker.js" />
+    <Content Include="Resource\Jquery.plus\poshytip\jquery.poshytip.js" />
+    <Content Include="Resource\Jquery.plus\poshytip\jquery.poshytip.min.js" />
+    <Content Include="Resource\Jquery.plus\poshytip\tip-skyblue\tip-skyblue.css" />
+    <Content Include="Resource\Jquery.plus\poshytip\tip-skyblue\tip-skyblue.png" />
+    <Content Include="Resource\Jquery.plus\poshytip\tip-skyblue\tip-skyblue_arrows.png" />
+    <Content Include="Resource\Jquery.plus\selectMonth\selectMonth.css" />
+    <Content Include="Resource\Jquery.plus\selectMonth\selectMonth.js" />
+    <Content Include="Resource\Jquery.plus\syValidator\images\accept.png" />
+    <Content Include="Resource\Jquery.plus\syValidator\images\exclamation.png" />
+    <Content Include="Resource\Jquery.plus\syValidator\images\x1.gif" />
+    <Content Include="Resource\Jquery.plus\syValidator\images\x2.gif" />
+    <Content Include="Resource\Jquery.plus\syValidator\images\x3.gif" />
+    <Content Include="Resource\Jquery.plus\syValidator\syValidator.js" />
+    <Content Include="Resource\Jquery.plus\syValidator\Tooltip.css" />
+    <Content Include="Resource\Jquery.plus\taffy.js" />
+    <Content Include="Resource\jquery\jquery-1.10.2.js" />
+    <Content Include="Resource\jquery\jquery-1.8.3.js" />
+    <Content Include="Resource\jquery\jquery-1.9.1.js" />
+    <Content Include="Resource\kindeditor-4.1.10\kindeditor-all-min.js" />
+    <Content Include="Resource\kindeditor-4.1.10\kindeditor-all.js" />
+    <Content Include="Resource\kindeditor-4.1.10\kindeditor-min.js" />
+    <Content Include="Resource\kindeditor-4.1.10\kindeditor.js" />
+    <Content Include="Resource\kindeditor-4.1.10\lang\ar.js" />
+    <Content Include="Resource\kindeditor-4.1.10\lang\en.js" />
+    <Content Include="Resource\kindeditor-4.1.10\lang\ko.js" />
+    <Content Include="Resource\kindeditor-4.1.10\lang\zh_CN.js" />
+    <Content Include="Resource\kindeditor-4.1.10\lang\zh_TW.js" />
+    <Content Include="Resource\kindeditor-4.1.10\license.txt" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\anchor\anchor.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\autoheight\autoheight.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\baidumap\baidumap.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\baidumap\index.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\baidumap\map.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\clearhtml\clearhtml.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\code\code.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\code\prettify.css" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\code\prettify.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\emoticons.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\0.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\1.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\10.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\100.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\101.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\102.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\103.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\104.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\105.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\106.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\107.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\108.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\109.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\11.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\110.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\111.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\112.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\113.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\114.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\115.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\116.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\117.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\118.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\119.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\12.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\120.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\121.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\122.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\123.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\124.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\125.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\126.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\127.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\128.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\129.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\13.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\130.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\131.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\132.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\133.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\134.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\14.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\15.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\16.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\17.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\18.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\19.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\2.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\20.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\21.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\22.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\23.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\24.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\25.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\26.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\27.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\28.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\29.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\3.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\30.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\31.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\32.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\33.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\34.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\35.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\36.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\37.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\38.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\39.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\4.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\40.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\41.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\42.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\43.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\44.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\45.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\46.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\47.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\48.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\49.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\5.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\50.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\51.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\52.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\53.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\54.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\55.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\56.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\57.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\58.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\59.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\6.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\60.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\61.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\62.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\63.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\64.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\65.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\66.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\67.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\68.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\69.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\7.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\70.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\71.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\72.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\73.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\74.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\75.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\76.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\77.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\78.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\79.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\8.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\80.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\81.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\82.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\83.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\84.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\85.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\86.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\87.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\88.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\89.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\9.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\90.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\91.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\92.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\93.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\94.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\95.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\96.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\97.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\98.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\99.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\emoticons\images\static.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\filemanager.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\images\file-16.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\images\file-64.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\images\folder-16.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\images\folder-64.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\filemanager\images\go-up.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\flash\flash.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\hello\hello.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\image\image.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\image\images\align_left.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\image\images\align_right.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\image\images\align_top.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\image\images\refresh.png" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\innerlink\innerlink.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\insert3dFile\insert3dFile.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\insertfile\insertfile.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\lineheight\lineheight.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\link\link.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\map\map.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\map\map.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\media\media.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\multiimage\images\image.png" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\multiimage\images\select-files-en.png" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\multiimage\images\select-files-zh_CN.png" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\multiimage\images\swfupload.swf" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\multiimage\multiimage.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\pagebreak\pagebreak.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\plainpaste\plainpaste.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\preview\preview.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\quickformat\quickformat.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\table\table.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\template\html\1.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\template\html\2.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\template\html\3.html" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\template\template.js" />
+    <Content Include="Resource\kindeditor-4.1.10\plugins\wordpaste\wordpaste.js" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\anchor.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\blank.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\flash.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\loading.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\media.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\common\rm.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\default\3d_16.png" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\default\background.png" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\default\default.css" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\default\default.png" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\default\link_16.png" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\qq\editor.gif" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\qq\qq.css" />
+    <Content Include="Resource\kindeditor-4.1.10\themes\simple\simple.css" />
+    <Content Include="Resource\style\banner.swf" />
+    <Content Include="Resource\style\common.css" />
+    <Content Include="Resource\style\PrintCss.css" />
+    <Content Include="Resource\ztree\awesomeStyle\awesome.css" />
+    <Content Include="Resource\ztree\awesomeStyle\img\loading.gif" />
+    <Content Include="Resource\ztree\jquery.ztree.all-3.5.js" />
+    <Content Include="Resource\ztree\jquery.ztree.all.js" />
+    <Content Include="Resource\ztree\jquery.ztree.core.js" />
+    <Content Include="Resource\ztree\jquery.ztree.core.min.js" />
+    <Content Include="Resource\ztree\jquery.ztree.excheck.js" />
+    <Content Include="Resource\ztree\jquery.ztree.excheck.min.js" />
+    <Content Include="Resource\ztree\jquery.ztree.exedit.js" />
+    <Content Include="Resource\ztree\jquery.ztree.exedit.min.js" />
+    <Content Include="Resource\ztree\jquery.ztree.exhide.js" />
+    <Content Include="Resource\ztree\jquery.ztree.exhide.min.js" />
+    <Content Include="Resource\ztree\metroStyle\img\line_conn.png" />
+    <Content Include="Resource\ztree\metroStyle\img\loading.gif" />
+    <Content Include="Resource\ztree\metroStyle\img\metro.gif" />
+    <Content Include="Resource\ztree\metroStyle\img\metro.png" />
+    <Content Include="Resource\ztree\metroStyle\metroStyle.css" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\1_close.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\1_open.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\2.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\3.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\4.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\5.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\6.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\7.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\8.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\diy\9.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\line_conn.gif" />
+    <Content Include="Resource\ztree\zTreeStyle\img\loading.gif" />
+    <Content Include="Resource\ztree\zTreeStyle\img\zTreeOrganization.png" />
+    <Content Include="Resource\ztree\zTreeStyle\img\zTreeStandard.gif" />
+    <Content Include="Resource\ztree\zTreeStyle\img\zTreeStandard.png" />
+    <Content Include="Resource\ztree\zTreeStyle\zTreeStyle.css" />
+    <Content Include="ScriptBll\MenuBll.js" />
+    <Content Include="ScriptBll\PrintBll.js" />
+    <Content Include="ScriptBll\ProjectBll.js" />
+    <Content Include="ScriptBll\PublicBll.js" />
+    <Content Include="ScriptBll\SelectComboTree.js" />
+    <Content Include="ScriptBll\theme.js" />
+    <Content Include="ScriptBll\UserBll.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bll\AccessHelp.cs" />
+    <Compile Include="Bll\UserBll.cs" />
+    <Compile Include="Bll\ContentBll.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ProjectHandler.ashx.cs">
+      <DependentUpon>ProjectHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\UserHandler.ashx.cs">
+      <DependentUpon>UserHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Handlers\ValidatorHandler.ashx.cs">
+      <DependentUpon>ValidatorHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="data\uploadFile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\upload\file_manager_json.ashx" />
+    <Content Include="Handlers\upload\upload_json.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Handlers\ProjectHandler.ashx" />
+    <Content Include="Handlers\UserHandler.ashx" />
+    <Content Include="Handlers\ValidatorHandler.ashx" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Properties\PublishProfiles\配置文件1.pubxml" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-datagridview\datagrid_data.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-edatagrid\datagrid_data.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-etree\tree_data.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\pivotgrid_data1.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-pivotgrid\pivotgrid_data2.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-portal\datagrid_data.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\datagrid_data1.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-rtl\tree_data1.json" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\images\.DS_Store" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\expand\jquery-easyui-texteditor\__MACOSX\images\._.DS_Store" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.eot" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.ttf" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\insdep\iconfont\iconfont.woff" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-blue\.DS_Store" />
+    <Content Include="Resource\jquery-easyui-1.5.3\themes\metro-gray\.DS_Store" />
+    <Content Include="Resource\ztree\awesomeStyle\awesome.less" />
+    <Content Include="Resource\ztree\awesomeStyle\fa.less" />
+    <Content Include="Resource\ztree\zTreeStyle\img\zTreeStandard.psd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sunny.Framework\CommonUtility\CommonUtility.csproj">
+      <Project>{a20c933b-da88-4ffb-97b0-e4ea82046a22}</Project>
+      <Name>CommonUtility</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1689</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

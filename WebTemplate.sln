@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.15
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sunny.App.Web", "Sunny.App.Web\Sunny.App.Web.csproj", "{D6325F1F-93B7-486D-9D0E-E2B727DC835A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Sunny.Framework", "Sunny.Framework", "{B0172D2A-32D9-4E19-9C4B-0974F5A8AC2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUtility", "Sunny.Framework\CommonUtility\CommonUtility.csproj", "{A20C933B-DA88-4FFB-97B0-E4EA82046A22}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6325F1F-93B7-486D-9D0E-E2B727DC835A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6325F1F-93B7-486D-9D0E-E2B727DC835A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6325F1F-93B7-486D-9D0E-E2B727DC835A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6325F1F-93B7-486D-9D0E-E2B727DC835A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A20C933B-DA88-4FFB-97B0-E4EA82046A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A20C933B-DA88-4FFB-97B0-E4EA82046A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A20C933B-DA88-4FFB-97B0-E4EA82046A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A20C933B-DA88-4FFB-97B0-E4EA82046A22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{A20C933B-DA88-4FFB-97B0-E4EA82046A22} = {B0172D2A-32D9-4E19-9C4B-0974F5A8AC2F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7CF2BC96-C38E-43B3-B3A8-C44A643E2908}
+	EndGlobalSection
+EndGlobal

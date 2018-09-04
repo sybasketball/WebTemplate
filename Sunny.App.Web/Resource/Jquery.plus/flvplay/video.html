@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+	<head>
+		<title></title>
+        <script src="../../jquery/jquery-1.10.2.js"></script>
+        <script type="text/javascript" src="swfobject.js"></script>
+		<style type="text/css">
+		    body{ padding:0px; margin:0px; overflow:hidden; }
+		</style>
+		<script type="text/javascript">           
+		    var filePath;
+		    var s2;
+		    $(document).ready(function () {
+		        url = "http://localhost/Resource/kindeditor-4.1.10/attached/media/20161010/20161010110514_6742.flv";
+		        if (url) {
+		            openFile(url);
+		        }
+		    });
+		    function getParameter(param) {
+		        var query = window.location.search;
+		        var iLen = param.length;
+		        var iStart = query.indexOf(param);
+		        if (iStart == -1)
+		            return "";
+		        iStart += iLen + 1;
+		        var iEnd = query.indexOf("&", iStart);
+		        if (iEnd == -1)
+		            return query.substring(iStart);
+		        return query.substring(iStart, iEnd);
+		    }
+		    function getName() {
+		        return filePath = "../../" + getParameter("url");
+		    }
+		    function openFile(url) {
+		        $("#player1").empty();
+		        s2 = new SWFObject("player.swf", "player", "100%", "100%", "7");
+		        s2.addParam("allowfullscreen", "true");
+		        s2.addParam("overstretch", "true");
+		        s2.addVariable("file", url);
+		        s2.addVariable("skin", "skin/stormtrooper.xml");
+		        s2.addVariable("image", "video_play.jpg");
+		        s2.addVariable("autostart", "true");
+		        s2.addVariable("logo", "logo.png");
+		        s2.addVariable("showvolume", "true");
+		        s2.addVariable("allowfullscreen", "true");
+		        s2.addVariable("width", "100%");
+		        s2.addVariable("height", "100%");
+		        s2.write("player1");
+            }
+		</script>
+	</head>
+	<body>        
+        <div id="player1">
+        
+        </div>
+	</body>
+</html>

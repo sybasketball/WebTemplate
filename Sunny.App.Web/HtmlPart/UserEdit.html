@@ -1,0 +1,17 @@
+﻿<script>
+        ComboxDataInit.InitCombox("#RoleId", "/Handlers/ValidatorHandler.ashx?op=role_comboxlist");
+</script>
+<form method="post" class="editDlgFrom"  enctype="multipart/form-data">
+    <input class="easyui-textbox easyui-validatebox" id="UserName" name="UserName" data-options="label:'用户名:',labelPosition:'top',required:true,width:'100%'" />
+    <input class="easyui-passwordbox easyui-validatebox" id=" Password" name="Password" data-options="label:'密码:',value:'123456',labelPosition:'top',required:true,width:'100%'" />
+    <input class="easyui-textbox easyui-validatebox" id="Name" name="Name" data-options="label:'昵称:',labelPosition:'top',required:true,width:'100%'" />
+    <select class="easyui-combobox" id="RoleId" name="RoleId" style="width: 100%" 
+            data-options="label:'角色:',prompt:'请选择角色...',valueField:'Id',textField: 'Title',editable: false,labelPosition:'top',required:true,width:'100%'">
+        
+    </select>
+    <input class="easyui-textbox easyui-validatebox" id="Remark" name="Remark" data-options="label:'备注:',labelPosition:'top',multiline:true,width:'100%'" />
+
+    <span style="display:none">
+        <input type="text" id="Id" name="Id" />
+    </span>
+</form>   

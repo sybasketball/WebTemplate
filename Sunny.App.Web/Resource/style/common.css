@@ -1,0 +1,189 @@
+﻿body   
+{
+    font-size: .80em;
+    margin: 0px;
+    padding: 0px;
+}
+.my_table{
+    table-layout:fixed;
+    empty-cells:show; 
+    border-collapse: collapse;
+    margin:0 auto;
+    font-size:16px;
+}
+.my_table td{
+    height:35px;
+    line-height:150%;
+}
+.my_table tr{
+    border:1px solid #000;
+    color:#000;
+}
+.my_table tr th {
+    height:35px; padding:0px;
+    font-weight:normal;
+    line-height:200%;
+}
+.my_table tr td,my_table tr th{
+    border:1px;
+}
+input,textarea,select{font-size:13px;}
+.l-window-mask{
+	    position:absolute;left:0;top:0;width:100%;height:100%; filter:alpha(opacity=10);opacity:0.10;background:#777;display1:none;font-size:1px; *zoom:1;overflow:hidden; display:none;z-index: 9000;
+    }
+.l-window-mask2{
+	    position:absolute;left:0;top:0;width:100%;height:100%; filter:alpha(opacity=10);opacity:0.10;background:#777;display1:none;font-size:1px; *zoom:1;overflow:hidden; display:none;z-index: 9000;
+    }
+.l-window-mask-nobackground{
+	    position:absolute;left:0;top:0;width:100%;height:100%; display1:none;font-size:1px; *zoom:1;overflow:hidden; display:none;z-index: 9000;
+    }
+.jloading{ position:absolute; font-size:12px; line-height:20px; text-align:center; left:43%; top:45%; 
+           border:2px solid #6593CF; padding:10px; color:#222; z-index:99999;
+           background:url(../EasyUI/themes/default/images/panel_loading.gif) no-repeat 10px 12px;
+           background-color:#fff; 
+           text-indent:30px;
+          }
+.emptyMsg {
+    display:block;
+    padding-top:15px;
+    line-height:200%;
+    font-size:18px;
+    color:#555;
+}
+.datagrid-view {
+    min-height: 80px;
+}
+.no-left-right-border{ border-right:none; border-left:none;}
+.no-left-border{border-left:none;}
+.no-bottom-border{border-bottom:none;}
+.no-right-border{border-right:none;}
+.no-top-border{border-top:none;}
+.menuList {
+    padding:8px 5px 8px 10px;
+}
+.menuList a{ width:95%;margin:3px 0px; color:Black; text-align: left}
+.menuList a:hover{ background:#dedede;  border:none; }
+.menuList a:visited{ text-decoration:none;}
+.menuList .l-btn-text{ font-size:14px; font-weight:500;}
+.form{ padding:5px;}
+.form .block_label{display:block; height:30px; line-height:40px;}
+.form input,.form textarea{ width:98%; font-size:11px;}
+.form_lable{  height:28px; line-height:32px; color:#3E4F69; font-weight:bold; width:100%;}
+.form_lable span{color:#777; font-weight:normal;}
+
+.form_table th{ width:90px; text-align:left; height:30px;color:#3E4F69; line-height:30px; vertical-align:top;}
+.form_table td{text-align:left;height:30px; line-height:30px;}
+.form_table td input[type="text"],
+.form_table td textarea{ width:320px; border:1px solid #ddd; overflow:auto;}
+.form_table td input[type="text"]{ height:23px; line-height:23px;}
+
+.form_table td select{ width:325px; height:23px; border:1px solid #ddd;}
+.form_table .save_td{ padding-left:85px; height :50px;}
+
+.view_table{ padding:0px; margin:0px;font-size:12px; margin-top:5px;table-layout:fixed;
+                empty-cells:show; border-width:0px 1px 1px 0px; border-style:dotted;border-color:#ccc;
+                border-collapse:inherit; line-height:200%;}
+.view_table th{ text-align:left;font-weight:bolder; padding:0 10px; white-space:nowrap;background:#efefef;  border-width:1px 0px 0px 1px; border-style:dotted; border-color:#ccc;}
+.view_table td{  width:50%;padding:3px 8px;background:#fff;  border-width:1px 0px 0px 1px; border-style:dotted; border-color:#ccc;white-space:inherit;}
+
+.rightPanel {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    height: 100%;
+    background: #fff;
+    z-index: 9000;
+    padding-left:1px;
+}
+.editDlgFrom {
+    padding:20px;
+    background-color:#fdfdfd;
+}
+.searchToolBarFrom {
+    padding: 8px;
+}
+.editDlgFrom .textbox-label-before,.editDlgFrom .textbox-label-top {
+    font-weight:bold;
+}
+.editDlgFrom .easyui-fluid,.editDlgFrom .textbox-label-before {
+    margin:4px auto;
+}
+.my-panel-title{ font-size:15px; font-weight:bold;color:#555; padding-left:20px; margin:0px 5px;height:26px;line-height:26px; background-position:left center;}
+.groupBar {
+    clear:both;
+    background:#efefef;
+    padding:3px;
+    margin-top:8px;
+    height:26px;
+    border-bottom:1px solid #ddd;
+}
+#top .l-btn-text {
+    color: #DAEEF5;
+}
+
+body {
+    font-family: 微软雅黑;
+}
+
+#path a {
+    border: none;
+    display: inline-block;
+}
+
+    #path a:hover {
+        background: transparent;
+        border: none;
+    }
+
+#path .path_split {
+    width: 16px;
+    height:25px;
+    background: url(/Resource/images/max.png) center center no-repeat;
+    display:inline-block;
+    vertical-align: middle;
+}
+#path .path_label {
+    height:25px;
+    display:inline-block;
+    vertical-align: middle;
+    color:#DAEEF5;
+    line-height:25px;
+}
+
+.m-btn-plain-active {
+    background: transparent;
+    border: none;
+}
+
+.portalPartTitle {
+    clear: both;
+    background: #f9f9f9;
+    padding: 3px;
+    height: 30px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+    .portalPartTitle .panel-title {
+        font-size: 15px;
+        font-weight: bold;
+        color: #555;
+        margin: 0px 5px;
+        height: 30px;
+        line-height: 32px;
+    }
+.portalPartBody {
+    border-top: 0px;
+    background: #fff;
+    padding:5px;
+}
+.bigView {
+    font-size:45px;
+    font-weight:bolder;
+    display:block;
+    text-align:center;
+    line-height:200%;
+}
+
+
+
+

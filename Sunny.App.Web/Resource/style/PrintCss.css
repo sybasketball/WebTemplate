@@ -1,0 +1,41 @@
+﻿body
+{
+    margin-bottom:10px;    
+}
+table{
+    table-layout:fixed;
+    empty-cells:show; 
+    border-collapse: collapse;
+    margin:0 auto;
+    font-size:16px;
+}
+td{
+    height:35px;
+    line-height:150%;
+}
+tr{
+    border:1px solid #000;
+    color:#000;
+}
+tr th {
+    height:35px; padding:0px;
+    font-weight:normal;
+    line-height:200%;
+}
+tr td,tr th{
+    border:1px solid #000;
+    /* padding:0 1em 0; */
+    padding:5px;
+    /*word-wrap:break-word; */
+}
+
+table .date{border:none;}
+table .date td{padding:0px; text-align:right;border:none;}
+table .title{border:none;}
+table .title td{border:none; font-size:28px; height:40px; vertical-align:bottom; line-height:100%; border-bottom:none; font-weight:bolder; text-align:center;}
+
+table .head{border:none;}
+table .head td{border:none;text-align:right;}
+
+table .foot{border:none;}
+table .foot td{padding:3px; text-align:right;border:none;}
